@@ -5,7 +5,12 @@ import React from 'react'
 export const ZaverecnyBonus2 = () => {
 	return (
 		<>
-			Odkaz: <a href="https://www.czechitas.cz/">www.czechitas.cz</a>
+			Odkaz:
+			<a onClick={(e) => {
+				{!confirm('Jste si jistí, že chcete opustit stránku a ztratit všechna data?') ? e.preventDefault() : null}
+				}} href="https://www.czechitas.cz/">
+				www.czechitas.cz
+			</a>
 			<hr />
 			Formulář:
 			<form>
